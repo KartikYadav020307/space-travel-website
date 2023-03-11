@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+      
+  <link rel="stylesheet" href="index.css">
+  <title>ISRO</title>
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+
+</head>
+
+<body class="crew">
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  <header class="primary-header flex">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+    <nav> 
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="missions.html"><span aria-hidden="true">01</span>Missions</a>
+            <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a>
+            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a>
+        </ul>
+    </nav>
+  </header>
+  
+  <main id="main" class="grid-container grid-container--crew flow">
+    <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet the members</h1>
+    
+    <div class="dot-indicators flex" role="tablist" aria-label="crew member list">
+      <button aria-selected="true" aria-controls="isrochief-tab" role="tab" data-image="founder-image" tabindex="0"><span class="sr-only">The Chief</span></button>
+      <button aria-selected="false" aria-controls="mission-tab" role="tab" data-image="isrochief-image" tabindex="-1"><span class="sr-only">The mission specialist</span></button>
+      <button aria-selected="false" aria-controls="pilot-tab" role="tab" data-image="scientist-image" tabindex="-1"><span class="sr-only">The pilot</span></button>
+      <button aria-selected="false" aria-controls="crew-tab" role="tab" data-image="dosac-image" tabindex="-1"><span class="sr-only">The crew engineer</span></button>
+    </div>
+    
+    <!-- FOUNDER -->
+    <article class="crew-details flow" id="isrochief-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Founder</h2>
+        <p class="fs-700 uppercase ff-serif">Vikram Sarabhai</p>
+      </header>
+      <p>Vikram Sarabhai was an Indian physicist and astronomer who initiated space research and helped develop nuclear power in India. 
+        He was honoured with Padma Bhushan in 1966 and the Padma Vibhushan in 1972. 
+        He is internationally regarded as the Father of the Indian Space Program.</p>
+    </article> 
+    
+    <!-- ISRO chief -->
+    <article hidden class="crew-details flow" id="mission-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Chief of ISRO</h2>
+        <p class="fs-700 uppercase ff-serif">S. Somnath</p>
+      </header>
+      <p>Somanath also served as the Director of Vikram Sarabhai Space Centre (VSSC), Kerela and Director of Liquid Propulsion Systems Centre (LPSC), Kerela. 
+        Somanath is known for his contributions to launch vehicle design, particularly in the areas of launch vehicle systems engineering
+        , structural design, structural dynamics, and pyrotechnics.</p>
+    </article> 
+    
+    <!-- Scientist -->
+    <article hidden class="crew-details flow" id="pilot-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Scientist</h2>
+        <p class="fs-700 uppercase ff-serif">K. Radhakrishnan</p>
+      </header>
+      <p>>K. Radhakrishnan is an Indian space scientist who headed the Indian Space Research Organisation between
+        November 2009 and December 2014 as Chairman of Space Commission, 
+       Secretary of the Department of Space and Chairman of ISRO.</p>
+    </article> 
+    
+    <!-- DoSAC -->
+    <article hidden class="crew-details flow" id="crew-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Director of Space Applications Centre</h2>
+        <p class="fs-700 uppercase ff-serif">Tapan Misra</p>
+      </header>
+      <p>Tapan Misra (born 20 January 1961) is an Indian scientist who has been the Director of Space Applications Centre and Physical 
+        Research Laboratory in ISRO. In 2021, Misra founded a space-tech startup called SISIR Radar, 
+        which manufactures Synthetic Aperture Radars (SAR), a technology that he pioneered in ISRO, for drones and satellites.</p>
+    </article> 
+    
+    
+    <picture id="founder-image">
+      <source srcset="assets/crew/image-vikram-sarabhai.png" type="image/png">
+      <img src="assets/crew/image-vikram-sarabhai.png" alt="Vikram Sarabhai">
+    </picture>
+    <picture hidden id="isrochief-image">
+      <source srcset="assets/crew/image-s-somnath.png" type="image/png">
+      <img src="assets/crew/image-s-somnath.png" alt="S. Somanath">
+    </picture>
+    <picture hidden id="scientist-image">
+      <source srcset="assets/crew/image-k-radhakrishnan.png" type="image/png">
+      <img src="assets/crew/image-k-radhakrishnan.png" alt="K. Radhakrishnan">
+    </picture>
+    <picture hidden id="dosac-image">
+      <source srcset="assets/crew/image-tapan-mishra.png" type="image/png">
+      <img src="assets/crew/image-tapan-mishra.png" alt="Tapan Mishra">
+    </picture>
+  </main>
+</body>
+</html>

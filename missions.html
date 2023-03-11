@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+  <title>ISRO</title>
+  <script src="navigation.js" defer></script>
+  <script src="tabs.js" defer></script>
+</head>
+
+<body class="destination">
+  <a class="skip-to-content" href="#main">Skip to content</a>
+  <header class="primary-header flex">
+    <div>
+      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
+        aria-expanded="false">Menu</span></button>
+    <nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span
+              aria-hidden="true">00</span>Home</a>
+        <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="missions.html"><span
+              aria-hidden="true">01</span>Missions</a>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span
+              aria-hidden="true">02</span>Crew</a>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span
+              aria-hidden="true">03</span>Technology</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="grid-container grid-container--destination flow">
+    <h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your choice</h1>
+
+    <picture id="moon-image">
+      <source srcset="assets/destination/image-moon.png" type="image/png">
+      <img src="assets/destination/image-moon.png" alt="Chandrayaan">
+    </picture>
+    <picture hidden id="mars-image">
+      <source srcset="assets/destination/image-mars.png" type="image/png">
+      <img src="assets/destination/image-mars.png" alt="Mars Orbiter Mission">
+    </picture>
+    <picture hidden id="europa-image">
+      <source srcset="assets/destination/image-astrosat.png" type="image/png">
+      <img src="assets/destination/image-astrosat.png" alt="ASTROSAT">
+    </picture>
+    <picture hidden id="titan-image">
+      <source srcset="assets/destination/aaditya-l-1.png" type="image/png">
+      <img src="assets/destination/aaditya-l-1.png" alt="Aaditya L-1">
+    </picture>
+
+
+    <div class="tab-list underline-indicators flex" role="tablist" aria-label="destination list">
+      <button aria-selected="true" role="tab" aria-controls="moon-tab"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="0" data-image="moon-image">Moon</button>
+      <button aria-selected="false" role="tab" aria-controls="mars-tab"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1" data-image="mars-image">Mars</button>
+      <button aria-selected="false" role="tab" aria-controls="astrosat-tab"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1"
+        data-image="europa-image">Astrosat</button>
+      <button aria-selected="false" role="tab" aria-controls="sun-tab"
+        class="uppercase ff-sans-cond text-accent letter-spacing-2" tabindex="-1" data-image="titan-image">Sun</button>
+    </div>
+
+    <!-- CHANDRAYAANs -->
+    <article class="destination-info flow" id="moon-tab" tabindex="0" role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">Moon</h2>
+
+      <p>Chandrayaan-1 was India's first lunar probe. It was launched by the ISRO on 22 October 2008,
+        and operated until August 2009. While, Chandrayaan-2 was launched from the second launch pad at
+        SDSC on 22 July 2019 to the Moon by GSLV Mk III. </p>
+
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+          <p class="ff-serif uppercase">384,400 km</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+          <p class="ff-serif uppercase">3 days</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- MANGALYAAN -->
+    <article hidden class="destination-info flow" id="mars-tab" tabindex="0" role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">Mars</h2>
+
+      <p>Mars Orbiter Mission (MOM), also called Mangalyaan, is a spacecraft orbiting Mars since 24 September 2014.
+        It was launched on 5 November 2013 by ISRO. It was India's first interplanetary mission and ISRO has become the
+        fourth space agency to reach Mars. The orbiter was finally called off on 2nd October, 2022.</p>
+
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+          <p class="ff-serif uppercase">225 mil. km</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+          <p class="ff-serif uppercase">9 months</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ASTROSAT -->
+    <article hidden class="destination-info flow" id="astrosat-tab" tabindex="0" role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">astrosat</h2>
+
+      <p>ASTROSAT was the first dedicated Indian Astronomy satellite mission launched by ISRO on 28 September 2015,
+        which enabled multi-wavelength observations of the celestial bodies and cosmic sources in X-ray and UV spectral
+        bands
+        simultaneously.</p>
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+          <p class="ff-serif uppercase">628 mil. km</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+          <p class="ff-serif uppercase">3 years</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ADITYA L-1 -->
+    <article hidden class="destination-info flow" id="sun-tab" tabindex="0" role="tabpanel">
+      <h2 class="fs-800 uppercase ff-serif">Aditya-L1</h2>
+
+      <p>Aditya-L1 is the first Indian observatory class mission to study the solar corona using a solar coronagraph.
+        X-ray spectroscopic instruments will provide flare spectra while the in-situ payload observes the solar events.
+        Aditya-L1 is expected to be launched in February 2023.
+      </p>
+
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+          <p class="ff-serif uppercase">148.18 Million km</p>
+        </div>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+          <p class="ff-serif uppercase">176 years</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <body>
+
+
+
+  </body>
+
+</html>
